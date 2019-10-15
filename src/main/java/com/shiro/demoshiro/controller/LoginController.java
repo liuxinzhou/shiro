@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     @PostMapping("/doLogin")
     public void doLogin(String username, String password) {
-        System.out.println("username==" + username + "   password" + password);
+        System.out.println("username==" + username + "   password:" + password);
         Subject subject = SecurityUtils.getSubject();
 
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
